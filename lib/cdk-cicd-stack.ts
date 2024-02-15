@@ -13,7 +13,6 @@ export class CdkCicdStack extends cdk.Stack {
       synth: new ShellStep('Synth',{
         input: CodePipelineSource.gitHub('Rabindra-Kumar-Gupta/cdk-cicd','main'),
         commands: [
-          'cdk-cicd',
           'npm ci',
           'npx cdk synth'
         ],
@@ -27,7 +26,6 @@ export class CdkCicdStack extends cdk.Stack {
 
     testStage.addPre(new CodeBuildStep('unit-tests', {
       commands:[
-        'cdk-cicd',
         'npm ci',
         'npm test'
       ]
