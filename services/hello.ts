@@ -6,3 +6,5 @@ async function handler(event:any, context: any) {
         body:'Hello!'
     }
 }
+
+export{handler}
