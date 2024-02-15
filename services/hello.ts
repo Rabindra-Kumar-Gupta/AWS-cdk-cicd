@@ -2,7 +2,7 @@
 
 async function handler(event:any, context: any) {
     return{
-        statusCode:200,
+        statusCode:400,
         body:'Hello!'
     }
 }
